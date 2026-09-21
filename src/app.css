@@ -1,0 +1,23 @@
+:root {
+  --bg: #17181c;
+  --bg-alt: #22242a;
+  --bg-hover: #2c2f36;
+
+  --text: #d7d9df;
+  --text-muted: #8b909b;
+
+  --accent: #e5a05a;
+  --border: #30333b;
+
+  --red: #925b5b;
+  --green: #617d68;
+  --yellow: #927a52;
+  --blue: #596f8c;
+  --purple: #756078;
+  --cyan: #607d78;
+  --white: #eceef2;
+
+  --red-bg: #281d21;
+  --green-bg: #1d2821;
+  --yellow-bg: #28251d;
+}
