@@ -3,15 +3,16 @@
     import figlet from "figlet";
     import ansi_regular from "figlet/fonts/Slant";
     figlet.parseFont("ANSI Regular", ansi_regular);
-    let timer = document.createElement("div");
+    let timer;
     let sessionsList = [];
     let totalTime;
     let nil, hrs_per_day, elapsedTime;
-    let closeBtn, editBtn, importBtn, exportBtn;
+    let closeBtn, editBtn, resetBtn;
     let showModal = false;
     let timerTime = 600;
     let editTimer;
     let modalValue = timerTime / 60;
+    let destroyTimer;
     nil = true;
 
     function formatTimeString(timeInSeconds) {
@@ -200,7 +201,7 @@
         });
         function resetTimer() {
             displaySessions();
-            let destroyTimer = manageTimer(timerTime, timer);
+            destroyTimer = manageTimer(timerTime, timer);
             ({ nil, hrs_per_day, totalTime } = accumulateDates());
         }
 
@@ -222,6 +223,10 @@
             resetTimer();
             showModal = false;
         };
+        resetBtn.addEventListener("click", (e) => {
+            destroyTimer(false);
+            resetTimer();
+        });
     });
 </script>
 
@@ -288,6 +293,9 @@
             </div>
             <div class="edit" bind:this={editBtn}>
                 <i class="nf nf-md-pencil"></i>
+            </div>
+            <div class="reset" bind:this={resetBtn}>
+                <i class="nf nf-md-reload"></i>
             </div>
         </div>
     </div>
