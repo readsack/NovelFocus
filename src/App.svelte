@@ -11,7 +11,7 @@
     let showModal = false;
     let timerTime = 600;
     let editTimer;
-    let modalValue = timerTime;
+    let modalValue = timerTime / 60;
     nil = true;
 
     function formatTimeString(timeInSeconds) {
