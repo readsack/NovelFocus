@@ -289,7 +289,7 @@
         <div class="timer" bind:this={timer}></div>
         <div class="panel">
             <div class="close" bind:this={closeBtn}>
-                <i class="nf nf-md-close"></i>
+                <i class="nf nf-md-check"></i>
             </div>
             <div class="edit" bind:this={editBtn}>
                 <i class="nf nf-md-pencil"></i>
